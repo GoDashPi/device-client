@@ -1,0 +1,10 @@
+{
+  "appenders": [
+    {
+      "type": "dateFile",
+      "filename": "logs/godashpi.log",
+      "pattern": "-yyyy-MM-dd",
+      "alwaysIncludePattern": false
+    }
+  ]
+}
