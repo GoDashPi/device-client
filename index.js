@@ -8,7 +8,7 @@ const { log } = require('./lib/shared/logger');
 
 // set environment
 
-process.env.DASHPI_ENV = process.argv[2] || 'device';
+process.env.DASHPI_ENV = process.env.DASHPI_ENV || 'device';
 
 log(`STARTING DASH PI [${process.env.DASHPI_ENV}]`);
 
