@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Tue Apr 11 09:06:08 2017
+-- File generated with SQLiteStudio v3.1.1 on Tue Apr 11 22:34:37 2017
 --
 -- Text encoding used: UTF-8
 --
@@ -15,7 +15,8 @@ CREATE TABLE files (
                           UNIQUE,
     session VARCHAR (64)  NOT NULL
                           REFERENCES sessions (session),
-    path    VARCHAR (128) NOT NULL,
+    path    VARCHAR (128) NOT NULL
+                          UNIQUE ON CONFLICT IGNORE,
     status  INTEGER       NOT NULL,
     created DATETIME      NOT NULL
 );
