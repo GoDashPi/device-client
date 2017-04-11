@@ -21,8 +21,9 @@ if (!process.env.UPLOAD_ONLY) {
   uploader.init()
     .then(() => {
       session.create()
-        // change both to start same time
-        .then(item => uploader.run(item)
-          .then(() => camera.run(item)));
+        .then((item) => Promise.all([
+          uploader.run(item),
+          camera.run(item),
+        ]));
     });
 }
