@@ -21,9 +21,6 @@ if (!process.env.UPLOAD_ONLY) {
   uploader.init()
     .then(() => {
       session.create()
-        .then((item) => Promise.all([
-          uploader.run(item),
-          camera.run(item),
-        ]));
+        .then(item => camera.run(item));
     });
 }
