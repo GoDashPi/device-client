@@ -19,12 +19,10 @@ if (process.env.UPLOAD_ONLY) {
 }
 
 if (!process.env.UPLOAD_ONLY) {
-  uploader.init()
-    .then(() => {
-      session.create()
-        .then((item) => {
-          camera.run(item);
-          gps.run(item);
-        });
+  session.create()
+    .then((item) => {
+      uploader.run(item);
+      gps.run(item);
+      return camera.run(item);
     });
 }

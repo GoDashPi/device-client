@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
-    "chokidar": "^1.6.1",
+    "chokidar": "^1.7.0",
     "fs-extra": "^2.1.2",
     "gps": "^0.3.0",
     "license-checker": "^8.0.3",
