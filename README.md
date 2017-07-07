@@ -7,7 +7,8 @@ setup sqlite db
 sqlite3 dashpi.db < dashpi.sql
 ```
 
-start
+start using [pm2](https://github.com/Unitech/pm2)
 ```
-DASHPI_API=https://nnnnnnnnnn.execute-api.region.amazonaws.com/dev ./scripts/start-development.sh
+$ export API_KEY=api-key-for-register-endpoint
+pm2 start process.device.yml
 ```
