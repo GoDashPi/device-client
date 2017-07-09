@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Wed Jul 5 10:17:53 2017
+-- File generated with SQLiteStudio v3.1.1 on Sun Jul 9 18:44:17 2017
 --
 -- Text encoding used: UTF-8
 --
@@ -10,16 +10,33 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS files;
 
 CREATE TABLE files (
-    id      INTEGER       PRIMARY KEY AUTOINCREMENT
-                          NOT NULL
-                          UNIQUE,
-    session VARCHAR (64)  NOT NULL
-                          REFERENCES sessions (session),
-    path    VARCHAR (128) NOT NULL
-                          UNIQUE ON CONFLICT IGNORE,
-    status  INTEGER       NOT NULL,
-    created DATETIME      NOT NULL,
-    type    VARCHAR (16)  NOT NULL
+    id       INTEGER       PRIMARY KEY AUTOINCREMENT
+                           NOT NULL
+                           UNIQUE,
+    session  VARCHAR (64)  NOT NULL
+                           REFERENCES sessions (session),
+    filename VARCHAR (64)  NOT NULL,
+    type     VARCHAR (16)  NOT NULL,
+    path     VARCHAR (128) NOT NULL
+                           UNIQUE ON CONFLICT IGNORE,
+    status   INTEGER       NOT NULL,
+    created  DATETIME      NOT NULL
+);
+
+
+-- Table: sensordata
+DROP TABLE IF EXISTS sensordata;
+
+CREATE TABLE sensordata (
+    id      INTEGER      PRIMARY KEY AUTOINCREMENT
+                         UNIQUE
+                         NOT NULL,
+    session VARCHAR (64) REFERENCES sessions (session) 
+                         NOT NULL,
+    data    TEXT         NOT NULL,
+    type    VARCHAR (16) NOT NULL,
+    status  INTEGER      NOT NULL,
+    created DATETIME     NOT NULL
 );
 
 

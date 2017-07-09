@@ -1,3 +1,7 @@
 {
-  "recordingsDirectory": "recordings"
+  "directories": {
+    "recordings": "data/recordings",
+    "gps": "data/gps",
+    "odb": "data/odb"
+  }
 }
