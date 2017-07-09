@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Tue Apr 11 22:34:37 2017
+-- File generated with SQLiteStudio v3.1.1 on Wed Jul 5 10:17:53 2017
 --
 -- Text encoding used: UTF-8
 --
@@ -18,7 +18,8 @@ CREATE TABLE files (
     path    VARCHAR (128) NOT NULL
                           UNIQUE ON CONFLICT IGNORE,
     status  INTEGER       NOT NULL,
-    created DATETIME      NOT NULL
+    created DATETIME      NOT NULL,
+    type    VARCHAR (16)  NOT NULL
 );
 
 
