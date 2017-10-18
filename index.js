@@ -17,7 +17,7 @@ log(`API_KEY [${process.env.API_KEY}]`);
 
 if (process.env.UPLOAD_ONLY) {
   log('UPLOAD AND CLEANUP ONLY');
-  uploader.init().then(log);
+  uploader.upload().then(log);
 }
 
 if (!process.env.UPLOAD_ONLY) {

@@ -2,3 +2,4 @@ node_modules
 logs
 dashpi.db
 data
+.apikey
