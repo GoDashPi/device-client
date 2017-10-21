@@ -4,7 +4,7 @@ apps:
     instances: 1
     exec_mode: fork
     env:
-      DASHPI_API: "https://23zyk358o0.execute-api.eu-west-1.amazonaws.com/dev"
+      DASHPI_API: "https://9fdbmnfvt1.execute-api.eu-west-1.amazonaws.com/dev"
       CAPTURE_PARAMS: "-v -cs 0 -t 0 -rot 180 -b 3000000 -sg 2000"
       DASHPI_ENV: "device"
   - script: index.js
@@ -13,6 +13,6 @@ apps:
     exec_mode: fork
     autorestart: false
     env:
-      DASHPI_API: "https://23zyk358o0.execute-api.eu-west-1.amazonaws.com/dev"
+      DASHPI_API: "https://9fdbmnfvt1.execute-api.eu-west-1.amazonaws.com/dev"
       DASHPI_ENV: "device"
       UPLOAD_ONLY: true
