@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "bluetooth-serial-port": "^2.1.5",
     "chokidar": "^1.7.0",
     "fs-extra": "^2.1.2",
     "gps": "^0.3.0",
