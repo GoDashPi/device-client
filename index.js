@@ -11,8 +11,11 @@ const controller = require('./lib/controller');
 const { log } = require('./lib/shared/logger');
 const { fileStatus } = require('./lib/shared/constants');
 
-// set environment
+const fs = require('fs');
 
+const apiKey = fs.readFileSync('./.apikey', { encoding: 'utf8' });
+
+process.env.API_KEY = apiKey.replace('\n', '');
 process.env.DASHPI_ENV = process.env.DASHPI_ENV || 'device';
 
 log(`STARTING DASH PI [${process.env.DASHPI_ENV}]`);
