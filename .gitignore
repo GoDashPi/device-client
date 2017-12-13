@@ -3,3 +3,4 @@ logs
 dashpi.db
 data
 .apikey
+sync.sh
